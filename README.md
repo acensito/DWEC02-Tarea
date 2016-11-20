@@ -1,11 +1,10 @@
-##
-#  DWEC - Tarea 2
+#DWEC - Tarea 2
 
 ## Enunciado:
 
-Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar ** onClick=&quot;window.....&quot; ** o enlaces simples). Cada tarea se colgará en un archivo en este formato:
+Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar `onClick=&quot;window.....&quot;` o enlaces simples). Cada tarea se colgará en un archivo en este formato:
 
-- **1.js ** para el ejercicio 1 con un documento llamado ** 1.html **
+- **1.js** para el ejercicio 1 con un documento llamado ** 1.html **
 - **2.js**  para el ejercicio  **2**  con un documento llamado  **2.html**
 - El archivo del que todo cuelga tendrá vuestro nombre tal y como aparece en las indicaciones de entrega.
 
@@ -22,7 +21,6 @@ Se utilizarán los objetos predefinidos en JavaScript vistos en la unidad. Si ne
 Utilizar arrays para recorrer las cadenas o utilizar JQuery u otra librería sin autorización previa supondrá un 0 en esa pregunta.
 
 ## Criterios de corrección
-
 Los puntos que tiene esta tarea están asignados de la siguiente forma:
 
 - Las tareas con números 3 y 5   **2 puntos cada**.
@@ -36,25 +34,20 @@ Los puntos que tiene esta tarea están asignados de la siguiente forma:
 - Deberéis verificar que las entradas sean correctas. Por ejemplo no me vale aceptar un espacio como cadena.
 - Utilizar  **arrays**   o utilizar  **JQuery**  u otra librería  **sin autorización**  previa supondrá un  **0**  en esa pregunta.
 
-**Total: 10 puntos máximo. **
+**Total: 10 puntos máximo.**
 
 ## Recursos necesarios:
 
--
-## rdenador personal.
--
-## Editor web para teclear el código de la aplicación.
--
-## Navegador web para probar el funcionamiento de la aplicación.
+ - Ordenador personal. 
+ - Editor web para teclear el código de la aplicación.
+ - Navegador web para probar el funcionamiento de la aplicación.
 
-## Para la información oficial del horóscopo chino:
+Para la información oficial del horóscopo chino:
 
--
-## [https://es.wikipedia.org/wiki/Astrolog%C3%ADa\_china](https://es.wikipedia.org/wiki/Astrolog%C3%ADa_china)
+ - [https://es.wikipedia.org/wiki/Astrolog%C3%ADa\_china](https://es.wikipedia.org/wiki/Astrolog%C3%ADa_china)
 
-## Para calcular el area de los cuadriláteros:
+Para calcular el área de los cuadriláteros:
 
--
-## [http://recursostic.educacion.es/descartes/web/Descartes1/1y2\_eso/Los\_cuadrilateros/Cuadrilateros2.htm](http://recursostic.educacion.es/descartes/web/Descartes1/1y2_eso/Los_cuadrilateros/Cuadrilateros2.htm)
--
-## [http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/](http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/)
+ - [http://recursostic.educacion.es/descartes/web/Descartes1/1y2\_eso/Los\_cuadrilateros/Cuadrilateros2.htm](http://recursostic.educacion.es/descartes/web/Descartes1/1y2_eso/Los_cuadrilateros/Cuadrilateros2.htm)
+ - [http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/](http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/)
+
