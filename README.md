@@ -2,13 +2,13 @@
 
 ## Enunciado:
 
-Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar `onClick=&quot;window.....&quot;` o enlaces simples). Cada tarea se colgará en un archivo en este formato:
+Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar `onClick="window.....";` o enlaces simples). Cada tarea se colgará en un archivo en este formato:
 
 - **1.js** para el ejercicio 1 con un documento llamado **1.html**
 - **2.js**  para el ejercicio  **2**  con un documento llamado  **2.html**
 - El archivo del que todo cuelga tendrá vuestro nombre tal y como aparece en las indicaciones de entrega.
 
-1. **Horóscopo Chino**. Se deberá preguntar por la fecha de nacimiento y deberemos indicarle su signo del zodiaco (dragón, cerdo, perro...) y su elemento (tierra, madera, fuego ....)y utilizando un  **iframe**  mostrar una página que explique el signo.  Podéis utilizar una página externa, no hace falta que escribáis la predicción vosotros. Podéis encontrar más información en recursos necesarios.** (2,5 puntos)**
+1. **Horóscopo Chino**. Se deberá preguntar por la fecha de nacimiento y deberemos indicarle su signo del zodiaco (dragón, cerdo, perro...) y su elemento (tierra, madera, fuego ....)y utilizando un  **iframe**  mostrar una página que explique el signo.  Podéis utilizar una página externa, no hace falta que escribáis la predicción vosotros. Podéis encontrar más información en recursos necesarios. **(2,5 puntos)**
 2. **Repeticiones de caractéres.**  Crea un script te pida introducir un texto y un carácter alfanumérico y te diga el número de repeticiones del mismo en dicho texto (Utilizar objeto String). **(1,5 puntos)**
 3. **Invertir mayúsculas**. Leer una cadena por teclado y después mostrar la salida.  **&quot;Hola&quot;**  se convertiría en  **&quot;hOLA&quot;** , y si la cadena fuera  **&quot;HOLA&quot;**  la cadena salida sería **&quot;hola&quot;. (2 puntos)**
 4. **Números Aleatorios.**  Generar un número aleatorio entre 0 y 5. Con ese número genera otra serie de  **números aleatorios**  entre 12-24 sin decimales para lo cual se ha realizado un truncamiento. **(1,5 puntos)**
