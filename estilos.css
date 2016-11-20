@@ -1,0 +1,74 @@
+html {
+    -webkit-font-smoothing: antialiased !important;
+    background-color: #e6e9e9;
+}
+
+body {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 2em auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+footer {
+    font-size: 0.8em;
+    margin-bottom: 0.2px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    font-style: italic;
+    text-align: justify;
+}
+
+h1 {
+    text-align: center;
+}
+
+a:link, a:hover, a:visited {
+    font-style: normal;
+    text-decoration: none;
+    color: #545454;
+}
+
+#menu ul {
+    list-style-type: none;
+    text-align: center;
+    font-size: 32pt;
+    font-weight: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#menu ul li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#enunciado {
+    text-align: justify;
+}
+
+#ejercicio1 {
+    text-align: center;
+}
+
+#ejercicio2, #ejercicio3, #ejercicio4{
+    text-align: center;
+    font-style: italic;
+    font-size: 32px;
+}
+
+#freim {
+    text-align: center;
+    width: 800px;
+    height: 480px;
+    border: none;
+}
+

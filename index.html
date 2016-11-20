@@ -1,96 +1,30 @@
 <!DOCTYPE html>
+<!--
+    CODIGO CREADO BAJO LICENCIA CREATIVE COMMONS
+    Reconocimiento - NoComercial - CompartirIgual (by-nc-sa): 
+    No se permite un uso comercial de la obra original ni de las posibles obras 
+    derivadas, la distribución de las cuales se debe hacer con una licencia igual
+    a la que regula la obra original.
+-->
+
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez</title>
-	<style type="text/css">
-        html {
-            background-color: #e6e9e9;
-            -webkit-font-smoothing: antialiased !important;
-        }
-
-        body {
-            margin: 2em auto;
-            padding: 2em 2em 4em;
-            max-width: 800px;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5em;
-            color: #545454;
-            background-color: #ffffff;
-            border-radius: 5px;
-        }
-        
-        p {
-            font-style: italic;
-            text-align: justify;
-        }
-
-	</style>
+    <meta charset="utf-8">
+    <title>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez</title>
+    <link type="text/css" href="estilos.css" rel="stylesheet" />
 </head>
+
 <body>
-	<h1>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez</h1>
-	<h2>Ejercicio 1:</h2>
-	<p>Enunciado</p>
-
-	<script>
-    function cambiaLetra() {
-        //Mandamos un mensaje de bienvenida para recoger la frase a modificar
-        var frase = prompt("Introduzca una palabra o una frase:");
-        //Recorremos la frase letra a letra mediante un ciclo.
-        for (var i = 0; i < frase.length; i++) {
-            //Obtenemos la letra en ese momento
-            var letra = frase.charAt(i);
-            //Si la letra es la misma que en mayusculas
-            if (letra === letra.toUpperCase()) {
-                //Escribimos esa letra, pero en minusculas
-                document.write(letra.toLowerCase());
-            //Si la letra es la misma que en minusculas
-            } else if (letra === letra.toLowerCase()) {
-                //Escribimos esa letra, pero en mayusculas
-                document.write(letra.toUpperCase());
-            }
-            //Para el resto de casos, se mantiene como está (por ejemplo, un número)
-        }
-    }
-
-    cambiaLetra();
-	</script>
-
-	<h2>Ejercicio 2:</h2>
-	<p>Enunciado</p>
-	
-	<script>
-    function repiteLetra() {
-        var frase = prompt("Introduzca una palabra o una frase:");
-        var repeticion = prompt("Introduzca cadena a buscar:");
-
-        // Version 2 trampeando con array, posiblemente más eficiente, menor uso de memoria
-        // var resultado = frase.split(repeticion).length-1;
-        // document.write(resultado);
-
-        contador = 0;
-        pos = frase.indexOf(repeticion);
-
-        while (pos > -1) {
-            ++contador;
-            pos = frase.indexOf(repeticion, ++pos);
-        }
-
-        document.write("Número de repeticiones de la cadena: " + contador);
-    }
-
-    repiteLetra();
-
-
-    function calculoArea() {
-        alert("Se va a proceder al calculo del area de un rombo");
-    }
-
-    calculoArea();
-	</script>
-
-    
+    <h1>DWEC - Tarea 2</h1>
+    <h1>Felipe Rodríguez Gutiérrez</h1>
+    <div id="menu">
+        <ul>
+            <li><a href="1.html" target="_blank" title="Ejercicio 1">Ejercicio 1</a></li>
+            <li><a href="2.html" target="_blank" title="Ejercicio 2">Ejercicio 2</a></li>
+            <li><a href="3.html" target="_blank" title="Ejercicio 3">Ejercicio 3</a></li>
+            <li><a href="4.html" target="_blank" title="Ejercicio 4">Ejercicio 4</a></li>
+        </ul>
+    </div>
+    <footer>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez - 2016/2017</footer>
 </body>
 </html>
