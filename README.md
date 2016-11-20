@@ -4,7 +4,7 @@
 
 Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar `onClick="window.....";` o enlaces simples). Cada tarea se colgará en un archivo en este formato:
 
-- **1.js** para el ejercicio 1 con un documento llamado **1.html**
+- **1.js** para el ejercicio **1** con un documento llamado **1.html**
 - **2.js**  para el ejercicio  **2**  con un documento llamado  **2.html**
 - El archivo del que todo cuelga tendrá vuestro nombre tal y como aparece en las indicaciones de entrega.
 
