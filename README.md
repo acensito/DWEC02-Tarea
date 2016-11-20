@@ -4,7 +4,7 @@
 
 Realizar una aplicación en JavaScript que genere una página web con varios contenidos. Cada tarea tendrá una serie de botones que abrirán una nueva ventana (podéis usar `onClick=&quot;window.....&quot;` o enlaces simples). Cada tarea se colgará en un archivo en este formato:
 
-- **1.js** para el ejercicio 1 con un documento llamado ** 1.html **
+- **1.js** para el ejercicio 1 con un documento llamado **1.html**
 - **2.js**  para el ejercicio  **2**  con un documento llamado  **2.html**
 - El archivo del que todo cuelga tendrá vuestro nombre tal y como aparece en las indicaciones de entrega.
 
@@ -26,8 +26,8 @@ Los puntos que tiene esta tarea están asignados de la siguiente forma:
 - Las tareas con números 3 y 5   **2 puntos cada**.
 - La tarea con número 1 vale  **2,5 puntos**.
 - La tarea 2 y  4 valen  **1,5 puntos**.
-- Claridad, comentarios y limpieza del código.  **0,5 puntos.**  Por ejemplo si se quiere hacer un  **if**  no utilizar un operador ternario ** ?:**  aunque se pueda utilizar para mostrar una salida. Ya discutiremos en el foro como podemos mejorar todos nuestro código e iremos creando una guía de estilo.  La  Calidad de los comentarios es importante **.**  Los comentarios deben ser significativos y útiles. No vale, por ejemplo, por ejemplo poner lo mismo que está en el** document.write()**.
-- La ortografía puede quitar hasta un máximo de ** 1,5 puntos**. Por cada acento o vulgarismo - **0,05**. Por cada falta más grave ** -0,1**. Si tienes varias veces la misma falta de ortografía se multiplicará por el número de ocurrencias. Esto se aplicará a los comentarios y a los resultados.
+- Claridad, comentarios y limpieza del código.  **0,5 puntos.**  Por ejemplo si se quiere hacer un  **if**  no utilizar un operador ternario `?:`  aunque se pueda utilizar para mostrar una salida. Ya discutiremos en el foro como podemos mejorar todos nuestro código e iremos creando una guía de estilo.  La  Calidad de los comentarios es importante.  Los comentarios deben ser significativos y útiles. No vale, por ejemplo, por ejemplo poner lo mismo que está en el `document.write()`.
+- La ortografía puede quitar hasta un máximo de **1,5 puntos**. Por cada acento o vulgarismo - **0,05**. Por cada falta más grave **-0,1**. Si tienes varias veces la misma falta de ortografía se multiplicará por el número de ocurrencias. Esto se aplicará a los comentarios y a los resultados.
 - No seguir la estructura de archivos baja  **0,5 puntos**.
 - Si en el foro se ha aclarado una duda sobre una tarea y no la lees y la haces mal tienes un 0 en esa tarea.
 - Si se hace otra cosa que la que se pide en esa tarea se tiene un 0 en esa tarea.
@@ -50,4 +50,3 @@ Para calcular el área de los cuadriláteros:
 
  - [http://recursostic.educacion.es/descartes/web/Descartes1/1y2\_eso/Los\_cuadrilateros/Cuadrilateros2.htm](http://recursostic.educacion.es/descartes/web/Descartes1/1y2_eso/Los_cuadrilateros/Cuadrilateros2.htm)
  - [http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/](http://www.icarito.cl/2010/08/102-8671-9-calculando-areas.shtml/)
-
