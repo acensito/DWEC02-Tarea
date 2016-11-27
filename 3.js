@@ -12,21 +12,21 @@
  * Metodo que recorre una frase, posición a posición, compara si es mayusculas o minusculas e invierte el resultado
  */
 function inversion() {
-    //Mandamos un mensaje de bienvenida para recoger la frase a modificar
+    // Mandamos un mensaje de bienvenida para recoger la frase a modificar
     var frase = prompt("Introduzca una palabra o una frase:");
-    //Recorremos la frase letra a letra mediante un ciclo.
+    // Recorremos la frase letra a letra mediante un ciclo.
     for (var i = 0; i < frase.length; i++) {
-        //Obtenemos la letra en ese momento
+        // Obtenemos la letra en ese momento
         var letra = frase.charAt(i);
-        //Si la letra es la misma que en mayusculas
+        // Si la letra es la misma que en mayusculas
         if (letra === letra.toUpperCase()) {
-            //Escribimos esa letra, pero en minusculas
+            // Escribimos esa letra, pero en minusculas
             document.write(letra.toLowerCase());
-            //Si la letra es la misma que en minusculas
+            // Si la letra es la misma que en minusculas
         } else if (letra === letra.toLowerCase()) {
-            //Escribimos esa letra, pero en mayusculas
+            // Escribimos esa letra, pero en mayusculas
             document.write(letra.toUpperCase());
         }
-        //Para el resto de casos, se mantiene como está (por ejemplo, un número)
+    // Para el resto de casos, se mantiene como está (por ejemplo, un número)
     }
 }

@@ -20,23 +20,23 @@ function coincidencias() {
     // principal de calculo. Trampeamos contando el numero de arrays en el que dividimos la frase menos uno y asi tenemos
     // el número de ocurrencias.
 
-    //var resultado = frase.split(repeticion).length - 1;
-    //document.write(resultado);
+    // var resultado = frase.split(repeticion).length - 1;
+    // document.write(resultado);
 
-    //Forma principal. Usamos un contador iniciado a cero.
+    // Forma principal. Usamos un contador iniciado a cero.
     contador = 0;
-    //Buscamos la primera coincidencia y volcamos su posición
+    // Buscamos la primera coincidencia y volcamos su posición
     pos = frase.indexOf(repeticion);
 
-    //Si existe al menos una coincidencia, empezamos a contar
+    // Si existe al menos una coincidencia, empezamos a contar
     while (pos > -1) {
-        //Sumanos una coincidencia al contador
+        // Sumanos una coincidencia al contador
         ++contador;
-        //Buscamos la siguiente coincidencia desde la posición en el que hemos encontrado una coincidencia
+        // Buscamos la siguiente coincidencia desde la posición en el que hemos encontrado una coincidencia
         pos = frase.indexOf(repeticion, ++pos);
     }
 
-    //Devolvemos el número de repeticiones de la cadena
+    // Devolvemos el número de repeticiones de la cadena
     document.write("Número de repeticiones de la cadena: " + contador);
 
 }

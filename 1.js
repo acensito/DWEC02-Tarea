@@ -6,107 +6,120 @@
  * a la que regula la obra original.
  */
 
-/**
- * Función diaDelAnyo que devuelve el dia del año de una fecha que solicite.
- * 
- * @returns {Number|String}
- */
-function diaDelAnyo() {
-    //Pedimos por prompt los datos del cumpleaños
-    var dia = prompt("Indique el dia de nacimiento:");
-    var mes = prompt("Indique el mes de nacimiento (en número):");
-    var anio = prompt("Indique el año de nacimiento:");
 
-    var cumple = new Date(mes + "/" + dia + "/" + anio); //Conformamos la fecha del cumpleaños con date
+function obtenerFecha(){
+    // Pedimos y volcamos en variables los datos del cumpleaños
+    var dia = parseInt(prompt("Indique el dia de nacimiento:"));
+    var mes = parseInt(prompt("Indique el mes de nacimiento (en número):"));
+    var anio = parseInt(prompt("Indique el año de nacimiento:"));
     
-    var anioCumple = cumple.getFullYear();
-    var finAnio = new Date("12/31/" + anioCumple);
-
-    var adia; //Variable del dia del año.
-    if (parseInt(dia) === cumple.getDate() && (mes-1) === cumple.getMonth()) {
-        adia = Math.floor(( cumple.getTime() - finAnio.getTime()) / 86400000 + 365);
-    } else {
-        adia = "errorFch"; //Asignamos un flag de error de la fecha, para control
-    }
-
-    /**
-     * Corregimos si es bisiesto el rango de fechas, dado que si el año es bisiesto, 
-     * ya que empieza a contar con el dia 0 (1 de enero) para asi incluir el dia 59 
-     * (29 de febrero). Por lo que podria generar errores de cara al horóscopo.
-     * 
-     * Como esto hay que tenerlo en cuenta, lo que hacemos es sumar 1 al rango del
-     * 1 de enero al 29 de febrero en bisiesto. De esta manera, el programa 
-     * asignara dia 60 al 29 de febrero compartiendolo con el dia 1 de marzo
-     * cuando sea bisiesto al igual que si fuera no bisiesto.
-     * 
-     * Posteriormente, filtramos si se pretende dar el dia 
-     */ 
-    if (((anio % 4 === 0 && anio % 100 !== 0) || (anio % 400 === 0)) && (adia <= 59)) { //Si es bisiesto y tenemos un dia entre el 1 de enero y el 29 de febrero...
-        adia = adia + 1; //Le sumamos un dia (para que enero no comience en 0)
-    } else if (dia === 29 && mes === 2) { //Si se introduce un dia 29 de febrero no bisiesto...
-        adia = "errorBi"; //Asignamos flag de error por haber introducido fecha incorrecta.
-    } else if ((dia === 29 && mes === 2) && ((anio % 4 === 0 && anio % 100 !== 0) || (anio % 400 === 0))) { //Si la fecha introducida es el 29 de febrero en bisiesto...
-         adia = 0; //Le asignamos el valor cero como valor único para el 29 de febrero
-    } //Para el resto de casos se queda el valor del día tal como está
+    var cumple = new Date(mes + "/" + dia + "/" + anio);
     
-    return adia; //Retornamos el valor calculado
-}
-
-/**
- * Función horoscopo que devuelve un enlace con el horoscopo celta del dia del año introducido
- * 
- * @param {type} adia
- * @returns {String}
- */
-function horoscopo (adia) {
-    var msg;
-    if (((adia >= 2) && (adia <=11)) || ((adia >= 186) && (adia <= 195))) { //RANGO DE FECHAS DEL ABETO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/abeto";
-    } else if (((adia >= 12) && (adia <=24)) || ((adia >= 196) && (adia <= 206))) { //RANGO DE FECHAS DEL OLMO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/olmo";
-    } else if (((adia >= 25) && (adia <=34)) || ((adia >= 207) && (adia <= 216))) { //RANGO DE FECHAS DEL CIPRES
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/cipres";
-    } else if (((adia >= 35) && (adia <=39)) || ((adia >= 121) && (adia <=134)) || ((adia >= 217) && (adia <= 225))) { //RANGO DE FECHAS DEL ALAMO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/alamo";
-    } else if (((adia >= 40) && (adia <=49)) || ((adia >= 226) && (adia <= 235))) { //RANGO DE FECHAS DEL CEDRO 
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/cedro";
-    } else if (((adia >= 50) && (adia <=59)) || (adia === 0) || ((adia >= 236) && (adia <= 245))) { //RANGO DE FECHAS DEL PINO (incluimos aqui el 29 de febrero)
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/pino";
-    } else if (((adia >= 60) && (adia <=69)) || ((adia >= 246) && (adia <= 255))) { //RANGO DE FECHAS DEL SAUCE LLORÓN
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/sauce-lloron";
-    } else if (((adia >= 70) && (adia <=79)) || ((adia >= 256) && (adia <= 265))) { //RANGO DE FECHAS DE LA LIMA 
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/lima";
-    } else if (adia === 80) { //RANGO DE FECHAS DEL ROBLE 
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/roble";
-    } else if (((adia >= 81) && (adia <=90)) || ((adia >= 267) && (adia <= 276))) { //RANGO DE FECHAS DEL AVELLANO 
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/avellano";
-    } else if (((adia >= 91) && (adia <=100)) || ((adia >= 277) && (adia <= 286))) { //RANGO DE FECHAS DEL SERBAL 
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/serbal";
-    } else if (((adia >= 101) && (adia <=110)) || ((adia >= 287) && (adia <= 296))) { //RANGO DE FECHAS DEL ARCE
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/arce";
-    } else if (((adia >= 111) && (adia <=120)) || ((adia >= 297) && (adia <= 315))) { //RANGO DE FECHAS DEL NOGAL
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/nogal";
-    } else if (((adia >= 135) && (adia <=144)) || ((adia >= 316) && (adia <= 325))) { //RANGO DE FECHAS DEL CASTAÑO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/castano";
-    } else if (((adia >= 145) && (adia <=254)) || ((adia >= 326) && (adia <= 335))) { //RANGO DE FECHAS DEL FRESNO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/fresno";
-    } else if (((adia >= 225) && (adia <=264)) || ((adia >= 336) && (adia <= 345))) { //RANGO DE FECHAS DEL CARPE
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/carpe";
-    } else if (adia === 226) { //RANGO DE FECHAS DEL OLIVO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/olivo";
-    } else if (((adia >= 265) && (adia <=274)) || ((adia >= 346) && (adia <= 355))) { //RANGO DE FECHAS DE LA HIGUERA
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/higuera";
-    } else if (adia === 275) { //RANGO DE FECHAS DEL ABEDUL
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/abedul";
-    } else if (adia === 356) { //RANGO DE FECHAS DE LA HAYA
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/haya";
-    } else if (((adia >= 357) && (adia <=365)) || (adia === 1) || ((adia >= 176) && (adia <= 185))) { //RANGO DE FECHAS DEL MANZANO
-        msg = "http://horoscopo.horoscopomania.com/signos-celtas/manzano";
+    if ((dia) === cumple.getDate() && (mes - 1) === cumple.getMonth() && (anio) === cumple.getFullYear()) {
+        
+        var signoOpc = parseInt(((anio - 4) % 12) + 1);
+        
+        var elementoOpc = parseInt(anio % 10);
+        
+        if (mes === 1) {
+            if (signoOpc === 1) {
+                signoOpc = 12;
+                elementoOpc = 9;
+            } else {
+                signoOpc = signo - 1;
+                elementoOpc = elementoOpc - 1;
+            } 
+        }
+        
+        var resultadoSigno, enlaceSigno, resultadoElemento, enlaceElemento;
+        switch (signoOpc){
+            case 1:
+                resultadoSigno = "RATA";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-rata.htm";
+                break;
+            case 2:
+                resultadoSigno = "BUEY";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-buey-bufalo.htm";
+                break;
+            case 3:
+                resultadoSigno = "TIGRE";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-tigre.html";
+                break;
+            case 4:
+                resultadoSigno = "CONEJO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-liebre-gato-conejo.htm";
+                break;
+            case 5:
+                resultadoSigno = "DRAGON";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-dragon.htm";
+                break;
+            case 6:
+                resultadoSigno = "SERPIENTE";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-serpiente.htm";
+                break;
+            case 7:
+                resultadoSigno = "CABALLO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-caballo.htm";
+                break;
+            case 8:
+                resultadoSigno = "CABRA";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-cabra-oveja.htm";
+                break;
+            case 9:
+                resultadoSigno = "MONO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-mono.htm";
+                break;
+            case 10:
+                resultadoSigno = "GALLO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-gallo.htm";
+                break;
+            case 11:
+                resultadoSigno = "PERRO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-perro.htm";
+                break;
+            case 12:
+                resultadoSigno = "CERDO";
+                enlaceSigno = "https://www.euroresidentes.com/horoscopo-chino/horoscopo-chino-cerdo-jabali.htm";
+                break;
+            default:
+                resultadoSigno = "¡CARLOS JESÚS, AYUDANOS! NO DAMOS CON LA TECLA";
+                enlaceSigno = "http://1.bp.blogspot.com/-VauJMec7F3Y/VMsy5jwHbYI/AAAAAAAAqLU/iheDbApePC8/s1600/CARLOS.jpg";
+                break;
+        }
+        
+        switch (elementoOpc){
+            case 0:
+            case 1:
+                resultadoElemento = "METAL";
+                break;
+            case 2:
+            case 3:
+                resultadoElemento = "AGUA";
+                break;
+            case 4:
+            case 5:
+                resultadoElemento = "MADERA";
+                break;
+            case 6:
+            case 7:
+                resultadoElemento = "FUEGO";
+                break;
+            case 8:
+            case 9:
+                resultadoElemento = "TIERRA";
+                break;
+        }
+        
+        document.write("<p>Tu signo es: " + resultadoSigno + "</p>");
+        document.write("<p>Tu elemento es: " + resultadoElemento + "</p>");
+        document.write("<iframe id=\"freim\" src=\"" + enlaceSigno + "\"><p>Este navegador no soporta iFrames</p></iframe>");
+          
     } else {
-        msg = "http://img.desmotivaciones.es/201012/Labrujalola.jpg"; //Caso de otros errores extraños...
+        document.write("<p>Ha saltado un error, Fiú Fiú!!</p>");
+        document.write("<img src=\"http://www.lamentiraestaahifuera.com/wp-content/uploads/2012/02/200pxCarloJesu_thumb.jpg\" \>");
+        document.write("<p>Vuelve a recargar la página e introduzca de nuevo la fecha de nacimiento</p>");
     }
-    return msg;
+    
+    
 }
-
-
 

@@ -1,44 +1,32 @@
 <!DOCTYPE html>
-<!-- Desarrollo Web en Entorno Cliente -->
-<!-- Tema 4: Estructuras definidas por el usuario en JavaScript -->
-<!-- Felipe Rodríguez Gutiérrez -->
-<!-- Tarea: 04 Prison Broke -->
+<!--
+CODIGO CREADO BAJO LICENCIA CREATIVE COMMONS
+
+Reconocimiento - NoComercial - CompartirIgual (by-nc-sa): 
+
+No se permite un uso comercial de la obra original ni de las posibles obras
+derivadas, la distribución de las cuales se debe hacer con una licencia igual
+a la que regula la obra original.
+-->
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>DWEC - Tarea 4 - Felipe Rodríguez Gutiérrez</title>
-        <link type="text/css" href="estilos.css" rel="stylesheet" />
-        <script type="text/javascript" src="1.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez</title>
+    <link type="text/css" href="estilos.css" rel="stylesheet" />
+    <script type="text/javascript" src="1.js"></script>
+</head>
 
-    <body>
-        <h1>DWEC - Tarea 4 </h1>
+<body>
+    <h1>DWEC - Tarea 2</h1>
+    
+    <h2>Ejercicio 1</h2>
+    <div id="enunciado">
+        <p><strong>Horóscopo chino:</strong> Se deberá preguntar por la fecha de nacimiento y deberemos indicarle su signo del zodiaco (dragón, cerdo, perro...) y su elemento (tierra, madera, fuego ....)y utilizando un iframe mostrar una página que explique el signo.  Podéis utilizar una página externa, no hace falta que escribáis la predicción vosotros. Podéis encontrar más información en recursos necesarios. (2,5 puntos)</p>  
+    </div>
+    
+    <div id="ejercicio1"><script>obtenerFecha();</script></div>
 
-        <div id="enunciado">
-            <p><strong>Ejercicio:</strong> Horóscopo Celta. Se deberá preguntar por 
-                la fecha de nacimiento y deberemos indicarle su signo del zodiaco y 
-                utilizando un iframe mostrar una página que explique el signo.  
-                Podéis utilizar una página externa, no hace falta que escribáis la 
-                predicción vosotros.
-            </p>
-        </div>
-
-        <div id="ejercicio1">
-            <script>
-
-                var adia = diaDelAnyo(); //Hacemos llamada a la función de calculo del dia del año para introducir la fecha de nacimiento
-
-                if (adia === "errorBi" || adia === "errorFch") { //Si del resultado del calculo, da error alguno, los controlamos
-                    document.write("<p><strong>Ha introducido una fecha incorrecta, recargue la página y vuelva a introducir sus datos</strong></p>");
-                    location.reload();
-                } else { //En el caso de obtener resultado positivo, mostramos en un iframe el resultado
-                    document.write("<iframe id=\"freim\" src=\"" + horoscopo(adia) + "\"><p>Este navegador no soporta iFrames</p></iframe>");
-                }
-
-            </script> 
-
-        </div>
-        <div id="pie">DWEC - Tarea 4 - Felipe Rodríguez Gutiérrez - 2015/2016</div>
-    </body>
+    <footer>DWEC - Tarea 2 - Felipe Rodríguez Gutiérrez - 2016/2017</footer>
+</body>
 </html>

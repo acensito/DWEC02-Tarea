@@ -55,11 +55,13 @@ a:link, a:hover, a:visited {
     text-align: justify;
 }
 
-#ejercicio1 {
+#ejercicio1, #ejercicio1 p {
     text-align: center;
+    font-size: 32px;
+    line-height: normal;
 }
 
-#ejercicio2, #ejercicio3, #ejercicio4{
+#ejercicio2, #ejercicio3, #ejercicio4, #ejercicio5{
     text-align: center;
     font-style: italic;
     font-size: 32px;
