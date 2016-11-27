@@ -30,7 +30,7 @@ function coincidencias() {
 
     // Si existe al menos una coincidencia, empezamos a contar
     while (pos > -1) {
-        // Sumanos una coincidencia al contador
+        // Sumanos esa coincidencia al contador
         ++contador;
         // Buscamos la siguiente coincidencia desde la posición en el que hemos encontrado una coincidencia
         pos = frase.indexOf(repeticion, ++pos);
